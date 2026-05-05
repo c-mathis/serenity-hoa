@@ -1,0 +1,10 @@
+# Backup files
+*.bak
+*-backup.html
+*-original.html
+
+# Workspace
+workspace/
+
+# System files
+.DS_Store
