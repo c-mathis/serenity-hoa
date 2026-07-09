@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding HOA Reserve Funds — Serenity Community Management</title>
+    <meta name="description" content="A guide for HOA board members and homeowners on reserve funds: what they are, why they matter, reserve studies, funding, and best practices." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { satoshi: ["Satoshi Variable", "sans-serif"], nyghtserif: ["Nyghtserif", "sans-serif"] } } } };
+    </script>
+    <style>
+      @font-face { font-family: "Satoshi Variable"; src: url("https://cdn.prod.website-files.com/66fef51bb2a32743f5bfff90/66fef51bb2a32743f5bfffe6_Satoshi-Variable.ttf") format("truetype"); font-weight: 300 900; font-style: normal; }
+      @font-face { font-family: "Nyghtserif"; src: url("https://cdn.prod.website-files.com/66fef51bb2a32743f5bfff90/66fef51bb2a32743f5c0004d_NyghtSerif-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: "Satoshi Variable", sans-serif; }
+      #nav-menu { display: none; }
+      #nav-menu.open { display: flex; }
+      @media (min-width: 768px) { #nav-menu { display: flex; } }
+
+      /* ---- Guide article styling (reused across all guide pages) ---- */
+      .guide-body { color: #44403c; }
+      .guide-body h2 { font-family: "Nyghtserif", serif; font-size: 1.9rem; line-height: 2.3rem; color: #1c1917; margin: 2.4rem 0 0.7rem; }
+      .guide-body h3 { font-weight: 700; font-size: 1.1rem; color: #1c1917; margin: 1.5rem 0 0.35rem; }
+      .guide-body p { line-height: 1.75; margin-bottom: 1rem; }
+      .guide-body ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 1.1rem; }
+      .guide-body ul li { margin-bottom: 0.35rem; }
+      .guide-body strong { color: #1c1917; }
+      .guide-callout { background: #ecfdf5; border-left: 4px solid #059669; border-radius: 14px; padding: 1.25rem 1.5rem; margin: 1.75rem 0; }
+      .guide-callout p { margin-bottom: 0.4rem; }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- ===== NAVBAR ===== -->
+    <header class="fixed top-0 inset-x-0 z-[1000] h-[62px] max-w-[1290px] mx-auto rounded-b-[30px]">
+      <div class="absolute inset-0 backdrop-blur-[5px] bg-white/90 rounded-b-[30px]"></div>
+      <div class="relative h-full max-w-[1300px] mx-auto flex items-center justify-between px-6 md:px-8">
+        <a href="../index.html" class="flex items-center no-underline">
+          <img src="../logo.png" alt="Serenity Community Management" class="h-12 md:h-14 w-auto" />
+        </a>
+        <button id="hamburger" class="md:hidden p-2 text-stone-900" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+        <nav id="nav-menu" class="absolute md:relative top-[62px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-white md:bg-transparent rounded-b-[30px] md:rounded-none flex-col md:flex-row items-start md:items-center w-full md:w-auto pb-6 md:pb-0 z-50 shadow-xl md:shadow-none">
+          <div class="flex flex-col md:flex-row items-start md:items-center md:gap-7 px-6 md:px-0 pt-4 md:pt-0">
+            <a href="../index.html#intro" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">Home</a>
+            <a href="../index.html#about" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">About Us</a>
+            <a href="../index.html#services" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">Services</a>
+            <a href="../index.html#resources" class="text-[15px] font-bold text-emerald-700 py-2 md:py-0 hover:text-emerald-900 transition-colors">Board Resources</a>
+          </div>
+          <div class="px-6 md:px-0 md:ml-6 mt-3 md:mt-0">
+            <a href="../index.html#proposal" class="bg-stone-900 text-white text-[13px] font-bold px-5 py-3 rounded-b-[30px] rounded-t-none md:rounded-[8px] block md:inline-block text-center hover:bg-emerald-800 transition-colors">Request a Proposal</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== GUIDE HERO ===== -->
+    <section class="pt-[120px] md:pt-[150px] pb-8 px-6 md:px-8 bg-stone-50 border-b border-stone-200">
+      <div class="max-w-[820px] mx-auto">
+        <a href="../index.html#resources" class="text-emerald-700 text-sm font-semibold hover:text-emerald-900">&larr; Board Resources</a>
+        <p class="text-emerald-700 font-semibold text-sm mt-4 uppercase tracking-wide">Board Education Series</p>
+        <h1 class="font-nyghtserif text-4xl md:text-6xl leading-tight text-stone-900 mt-2">Understanding HOA Reserve Funds</h1>
+        <p class="text-stone-600 text-lg mt-4">A guide for HOA board members and homeowners on protecting your community's financial future.</p>
+      </div>
+    </section>
+
+    <!-- ===== GUIDE BODY ===== -->
+    <main class="px-6 md:px-8 py-12">
+      <article class="guide-body max-w-[820px] mx-auto">
+        <p>One of the most important responsibilities of a Homeowners Association (HOA) is planning for the future. Community assets wear out over time, and major repairs and replacements can be costly. Reserve funds help ensure that the association has the financial resources needed to maintain common areas and protect property values without relying on unexpected special assessments.</p>
+        <p>Understanding reserve funds is essential for every board member and homeowner. This guide explains what reserve funds are, why they matter, and how they support the long-term financial health of an HOA.</p>
+
+        <h2>What Are HOA Reserve Funds?</h2>
+        <p>Reserve funds are money set aside for the future repair, replacement, or restoration of major common-area components. Unlike operating funds, which pay for day-to-day expenses, reserve funds are intended for large capital expenditures that occur periodically over many years. They help ensure that future owners and current owners share fairly in the cost of maintaining the community.</p>
+
+        <h2>Operating Funds vs. Reserve Funds</h2>
+        <h3>Operating Funds</h3>
+        <p>Used for routine expenses such as:</p>
+        <ul>
+          <li>Landscaping</li><li>Utilities</li><li>Insurance premiums</li><li>Management fees</li><li>Pool maintenance</li><li>Administrative expenses</li><li>Minor repairs</li>
+        </ul>
+        <p>These expenses occur regularly and are typically included in the annual operating budget.</p>
+        <h3>Reserve Funds</h3>
+        <p>Used for major repairs and replacements such as:</p>
+        <ul>
+          <li>Roof replacement</li><li>Road resurfacing</li><li>Exterior painting</li><li>Pool renovation</li><li>Elevator modernization</li><li>Fence replacement</li><li>Clubhouse improvements</li><li>Security gate replacement</li>
+        </ul>
+        <p>Reserve expenditures generally occur less frequently but involve significant costs.</p>
+
+        <h2>Why Reserve Funds Matter</h2>
+        <p>Reserve funds provide financial stability and help the association prepare for future expenses. Benefits include:</p>
+        <h3>Financial Predictability</h3>
+        <p>Boards can plan for major projects rather than reacting to emergencies.</p>
+        <h3>Reduced Special Assessments</h3>
+        <p>Proper reserve funding decreases the likelihood of unexpected assessments.</p>
+        <h3>Protection of Property Values</h3>
+        <p>Well-maintained communities are more attractive to current and prospective owners.</p>
+        <h3>Fair Cost Allocation</h3>
+        <p>Current owners contribute toward the future deterioration of common-area assets.</p>
+        <h3>Improved Lending and Marketability</h3>
+        <p>Financially healthy associations are often viewed more favorably by lenders and buyers.</p>
+
+        <h2>What Is a Reserve Study?</h2>
+        <p>A reserve study is a professional financial planning tool used to estimate future repair and replacement costs for major common-area assets. The study identifies:</p>
+        <ul>
+          <li>Common-area components</li><li>Current condition</li><li>Remaining useful life</li><li>Estimated replacement costs</li><li>Recommended annual reserve contributions</li>
+        </ul>
+        <p>A reserve study serves as the roadmap for reserve funding decisions.</p>
+
+        <h2>How Reserve Funding Works</h2>
+        <p>Each year, a portion of homeowner assessments is allocated to reserves. For example, if a roof replacement is expected to cost $500,000 in 20 years, the association should gradually collect funds over that period rather than waiting until replacement is required. This process helps spread costs fairly among owners who benefit from the asset throughout its life cycle.</p>
+
+        <h2>Understanding Reserve Fund Strength</h2>
+        <p>Reserve fund strength is often measured by comparing actual reserve balances to the amount that should ideally be accumulated.</p>
+        <ul>
+          <li><strong>Fully Funded</strong> — the reserve balance closely matches the amount that should be available based on asset deterioration.</li>
+          <li><strong>Partially Funded</strong> — some reserve funding exists, but balances are below recommended levels.</li>
+          <li><strong>Underfunded</strong> — reserve balances are insufficient to meet anticipated future obligations, increasing the risk of special assessments and deferred maintenance.</li>
+        </ul>
+
+        <h2>Common Causes of Reserve Fund Problems</h2>
+        <ul>
+          <li>Assessments kept artificially low</li><li>Failure to update reserve studies</li><li>Inflation and rising construction costs</li><li>Deferred maintenance</li><li>Unplanned emergencies</li><li>Borrowing from reserves without repayment plans</li>
+        </ul>
+
+        <h2>The Risk of Special Assessments</h2>
+        <p>When reserve funds are inadequate, boards may need to levy special assessments — an additional charge imposed on homeowners to cover unexpected or unfunded expenses. Special assessments can create financial hardship, increase collection issues, generate homeowner dissatisfaction, and delay necessary repairs. Proper reserve funding reduces the likelihood of special assessments.</p>
+
+        <h2>The Board's Responsibility</h2>
+        <p>The Board of Directors has a fiduciary duty to manage reserve funds responsibly. Board responsibilities include:</p>
+        <ul>
+          <li>Reviewing reserve studies</li><li>Monitoring reserve balances</li><li>Budgeting annual contributions</li><li>Approving reserve expenditures</li><li>Updating reserve projections</li><li>Communicating reserve needs to homeowners</li>
+        </ul>
+
+        <h2>Questions Every Board Member Should Ask</h2>
+        <ul>
+          <li>How much money is currently in reserves?</li><li>When was the last reserve study completed?</li><li>Are annual reserve contributions adequate?</li><li>Which major components will require replacement next?</li><li>Has the association deferred maintenance?</li><li>Are reserves invested appropriately (safety, liquidity, FDIC-insured accounts)?</li><li>What is the association's long-term funding plan?</li>
+        </ul>
+
+        <div class="guide-callout">
+          <p class="font-nyghtserif text-xl text-stone-900">Guiding Principle</p>
+          <p class="italic">"Plan today for tomorrow's repairs, protect property values, and build a financially strong community."</p>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>Reserve funds are one of the most important financial tools available to a homeowners association. Proper reserve planning protects property values, reduces financial risk, promotes fairness among homeowners, and ensures the community remains attractive and financially stable for years to come. Strong reserve funding is not simply a budgeting exercise — it is a long-term commitment to preserving the assets and future of the community.</p>
+
+        <div class="mt-12 pt-8 border-t border-stone-200">
+          <p class="text-stone-500 text-sm">Have questions about your community's reserves or financial planning? <a href="../index.html#proposal" class="text-emerald-700 font-semibold hover:text-emerald-900">Request a proposal</a> and our team will be glad to help.</p>
+        </div>
+      </article>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-stone-900 text-white px-6 md:px-8 py-14 mt-8">
+      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div>
+          <img src="../logo.png" alt="Serenity Community Management" class="h-14 w-auto brightness-0 invert" />
+          <p class="text-stone-400 mt-4 max-w-[320px]">Professional HOA management that puts your community first.</p>
+        </div>
+        <nav class="flex flex-col gap-2">
+          <a href="../index.html#intro" class="text-stone-300 hover:text-white transition-colors">Home</a>
+          <a href="../index.html#about" class="text-stone-300 hover:text-white transition-colors">About Us</a>
+          <a href="../index.html#services" class="text-stone-300 hover:text-white transition-colors">Services</a>
+          <a href="../index.html#resources" class="text-stone-300 hover:text-white transition-colors">Board Resources</a>
+          <a href="../index.html#proposal" class="text-stone-300 hover:text-white transition-colors">Request a Proposal</a>
+        </nav>
+        <div class="text-stone-400">
+          <p class="font-semibold text-white">Serenity Community Management</p>
+          <p class="mt-1">Las Vegas, NV</p>
+          <p class="mt-1"><a href="mailto:info@serenitycm.net" class="hover:text-white">info@serenitycm.net</a></p>
+        </div>
+      </div>
+      <p class="text-stone-500 text-sm text-center mt-10">© 2026 Serenity Community Management. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

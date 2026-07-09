@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management Services & Budget Information — Serenity Community Management</title>
+    <meta name="description" content="An overview of the management services and budget information Serenity Community Management reviews when preparing a contract proposal for your HOA." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { satoshi: ["Satoshi Variable", "sans-serif"], nyghtserif: ["Nyghtserif", "sans-serif"] } } } };
+    </script>
+    <style>
+      @font-face { font-family: "Satoshi Variable"; src: url("https://cdn.prod.website-files.com/66fef51bb2a32743f5bfff90/66fef51bb2a32743f5bfffe6_Satoshi-Variable.ttf") format("truetype"); font-weight: 300 900; font-style: normal; }
+      @font-face { font-family: "Nyghtserif"; src: url("https://cdn.prod.website-files.com/66fef51bb2a32743f5bfff90/66fef51bb2a32743f5c0004d_NyghtSerif-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: "Satoshi Variable", sans-serif; }
+      #nav-menu { display: none; }
+      #nav-menu.open { display: flex; }
+      @media (min-width: 768px) { #nav-menu { display: flex; } }
+
+      /* ---- Guide article styling (reused across all guide pages) ---- */
+      .guide-body { color: #44403c; }
+      .guide-body h2 { font-family: "Nyghtserif", serif; font-size: 1.9rem; line-height: 2.3rem; color: #1c1917; margin: 2.4rem 0 0.7rem; }
+      .guide-body h3 { font-weight: 700; font-size: 1.1rem; color: #1c1917; margin: 1.5rem 0 0.35rem; }
+      .guide-body p { line-height: 1.75; margin-bottom: 1rem; }
+      .guide-body ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 1.1rem; }
+      .guide-body ul li { margin-bottom: 0.35rem; }
+      .guide-body strong { color: #1c1917; }
+      .guide-callout { background: #ecfdf5; border-left: 4px solid #059669; border-radius: 14px; padding: 1.25rem 1.5rem; margin: 1.75rem 0; }
+      .guide-callout p { margin-bottom: 0.4rem; }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- ===== NAVBAR ===== -->
+    <header class="fixed top-0 inset-x-0 z-[1000] h-[62px] max-w-[1290px] mx-auto rounded-b-[30px]">
+      <div class="absolute inset-0 backdrop-blur-[5px] bg-white/90 rounded-b-[30px]"></div>
+      <div class="relative h-full max-w-[1300px] mx-auto flex items-center justify-between px-6 md:px-8">
+        <a href="../index.html" class="flex items-center no-underline">
+          <img src="../logo.png" alt="Serenity Community Management" class="h-12 md:h-14 w-auto" />
+        </a>
+        <button id="hamburger" class="md:hidden p-2 text-stone-900" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+        <nav id="nav-menu" class="absolute md:relative top-[62px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-white md:bg-transparent rounded-b-[30px] md:rounded-none flex-col md:flex-row items-start md:items-center w-full md:w-auto pb-6 md:pb-0 z-50 shadow-xl md:shadow-none">
+          <div class="flex flex-col md:flex-row items-start md:items-center md:gap-7 px-6 md:px-0 pt-4 md:pt-0">
+            <a href="../index.html#intro" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">Home</a>
+            <a href="../index.html#about" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">About Us</a>
+            <a href="../index.html#services" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">Services</a>
+            <a href="../index.html#resources" class="text-[15px] font-bold text-emerald-700 py-2 md:py-0 hover:text-emerald-900 transition-colors">Board Resources</a>
+          </div>
+          <div class="px-6 md:px-0 md:ml-6 mt-3 md:mt-0">
+            <a href="../index.html#proposal" class="bg-stone-900 text-white text-[13px] font-bold px-5 py-3 rounded-b-[30px] rounded-t-none md:rounded-[8px] block md:inline-block text-center hover:bg-emerald-800 transition-colors">Request a Proposal</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== GUIDE HERO ===== -->
+    <section class="pt-[120px] md:pt-[150px] pb-8 px-6 md:px-8 bg-stone-50 border-b border-stone-200">
+      <div class="max-w-[820px] mx-auto">
+        <a href="../index.html#resources" class="text-emerald-700 text-sm font-semibold hover:text-emerald-900">&larr; Board Resources</a>
+        <p class="text-emerald-700 font-semibold text-sm mt-4 uppercase tracking-wide">Board Education Series</p>
+        <h1 class="font-nyghtserif text-4xl md:text-6xl leading-tight text-stone-900 mt-2">Management Services & Budget Information</h1>
+        <p class="text-stone-600 text-lg mt-4">What Serenity reviews when preparing a management proposal — and how the right information helps us tailor services to your community's needs and budget.</p>
+      </div>
+    </section>
+
+    <!-- ===== GUIDE BODY ===== -->
+    <main class="px-6 md:px-8 py-12">
+      <article class="guide-body max-w-[820px] mx-auto">
+        <p>Choosing a management company is one of the most consequential decisions a board makes. To prepare an accurate, tailored proposal, Serenity Community Management gathers a clear picture of your association's current arrangements, service expectations, and budget considerations. This overview explains the information we review and why each piece matters — so your board knows exactly what to have on hand when requesting a proposal.</p>
+
+        <h2>Association Basics</h2>
+        <p>Every proposal starts with a few fundamentals that shape scope and pricing. We look at:</p>
+        <ul>
+          <li>The association's name and unit count</li>
+          <li>The current monthly management fee</li>
+          <li>The current management company (if any)</li>
+        </ul>
+        <p>These details help us right-size a service package and benchmark our pricing against what the community pays today.</p>
+
+        <h2>Services Currently Included</h2>
+        <p>Not all management agreements cover the same scope. We review which of the following services are included in the association's current fee — and which are billed separately or not provided at all:</p>
+        <ul>
+          <li>Financial management</li>
+          <li>Accounts payable processing</li>
+          <li>Accounts receivable processing</li>
+          <li>Delinquency management</li>
+          <li>Violation enforcement</li>
+          <li>Architectural review processing</li>
+          <li>Board meeting attendance</li>
+          <li>Community inspections</li>
+          <li>Vendor management</li>
+          <li>After-hours emergency service</li>
+          <li>Website / owner portal</li>
+          <li>Resale package processing</li>
+        </ul>
+        <p>Understanding the current scope makes it easy to compare proposals on an apples-to-apples basis and to spot gaps the association may be paying for elsewhere.</p>
+
+        <h2>Meeting and Inspection Cadence</h2>
+        <p>Service levels also depend on how often the board meets and how frequently the community is inspected. We ask about:</p>
+        <ul>
+          <li>The number of board meetings typically held each year</li>
+          <li>The number of community inspections performed each month</li>
+        </ul>
+        <p>These cadences directly affect staffing and responsiveness, so they are an important input to any proposal.</p>
+
+        <h2>Service Gaps and Priorities</h2>
+        <p>Beyond the current scope, we want to understand what the association wishes it were receiving. Boards often identify services they would like Serenity to provide that they are not getting today. We also review the association's primary concerns with its current management company, which commonly include:</p>
+        <ul>
+          <li>Communication</li>
+          <li>Financial reporting</li>
+          <li>Vendor management</li>
+          <li>Board support</li>
+          <li>Homeowner service</li>
+          <li>Assessment collections</li>
+          <li>Violation enforcement</li>
+          <li>Architectural review processing</li>
+          <li>Technology / portal access</li>
+          <li>Meeting management</li>
+        </ul>
+        <p>Naming these concerns up front lets us design a proposal that addresses the association's real pain points rather than a generic package.</p>
+
+        <h2>Type of Engagement</h2>
+        <p>Associations engage a management company for different reasons. We tailor the proposal to the kind of relationship the board is seeking:</p>
+        <ul>
+          <li><strong>Full-service management</strong> — comprehensive day-to-day operations</li>
+          <li><strong>Financial-only management</strong> — accounting, collections, and reporting</li>
+          <li><strong>Consulting services</strong> — expert guidance on specific issues</li>
+          <li><strong>Transition assistance</strong> — support moving from another company or from self-management</li>
+        </ul>
+
+        <h2>Budget Considerations</h2>
+        <p>A realistic budget conversation leads to a better-fitting proposal. We review whether the board has established a budget range for management services and, if so, the desired monthly management budget. Sharing a target range is optional, but it helps us recommend the service level that delivers the most value within the association's means.</p>
+
+        <h2>What Matters Most in Your Decision</h2>
+        <p>Finally, we want to understand the factors that will weigh most heavily when the board selects a management company. Common priorities include:</p>
+        <ul>
+          <li>Price</li>
+          <li>Customer service</li>
+          <li>HOA industry experience</li>
+          <li>Financial reporting</li>
+          <li>Technology and owner portal</li>
+          <li>Communication</li>
+          <li>Vendor oversight</li>
+          <li>Nevada HOA knowledge</li>
+          <li>Board support</li>
+          <li>Reputation</li>
+        </ul>
+        <p>Knowing your priorities lets us highlight the strengths that matter most to your community.</p>
+
+        <h2>Timeline</h2>
+        <p>To coordinate a smooth handoff, we also confirm two dates:</p>
+        <ul>
+          <li>The expected date for management company selection</li>
+          <li>The desired management start date</li>
+        </ul>
+        <p>A clear timeline helps us plan an orderly transition with no gaps in service.</p>
+
+        <div class="guide-callout">
+          <p class="font-nyghtserif text-xl text-stone-900">Why This Matters</p>
+          <p class="italic">"The more we understand about your community's current services, concerns, and budget, the more precisely we can build a proposal that fits — no surprises, no filler, just the right services at the right price."</p>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>Gathering this information is not a formality — it is how Serenity Community Management builds proposals that reflect the true needs of your community. With a clear view of your current services, service gaps, budget, and priorities, we can recommend a management package designed to deliver real value and a seamless transition. When you are ready, we will guide you through each of these areas so your board can make a confident, well-informed decision.</p>
+
+        <div class="mt-12 pt-8 border-t border-stone-200">
+          <p class="text-stone-500 text-sm">Have questions about management services or want a proposal tailored to your community? <a href="../index.html#proposal" class="text-emerald-700 font-semibold hover:text-emerald-900">Request a proposal</a> and our team will be glad to help.</p>
+        </div>
+      </article>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-stone-900 text-white px-6 md:px-8 py-14 mt-8">
+      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div>
+          <img src="../logo.png" alt="Serenity Community Management" class="h-14 w-auto brightness-0 invert" />
+          <p class="text-stone-400 mt-4 max-w-[320px]">Professional HOA management that puts your community first.</p>
+        </div>
+        <nav class="flex flex-col gap-2">
+          <a href="../index.html#intro" class="text-stone-300 hover:text-white transition-colors">Home</a>
+          <a href="../index.html#about" class="text-stone-300 hover:text-white transition-colors">About Us</a>
+          <a href="../index.html#services" class="text-stone-300 hover:text-white transition-colors">Services</a>
+          <a href="../index.html#resources" class="text-stone-300 hover:text-white transition-colors">Board Resources</a>
+          <a href="../index.html#proposal" class="text-stone-300 hover:text-white transition-colors">Request a Proposal</a>
+        </nav>
+        <div class="text-stone-400">
+          <p class="font-semibold text-white">Serenity Community Management</p>
+          <p class="mt-1">Las Vegas, NV</p>
+          <p class="mt-1"><a href="mailto:info@serenitycm.net" class="hover:text-white">info@serenitycm.net</a></p>
+        </div>
+      </div>
+      <p class="text-stone-500 text-sm text-center mt-10">© 2026 Serenity Community Management. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Every HOA Treasurer Should Know — Serenity Community Management</title>
+    <meta name="description" content="A board-training guide covering the HOA treasurer's fiduciary duty, budgets, reserves, financial statements, internal controls, and reporting responsibilities." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { satoshi: ["Satoshi Variable", "sans-serif"], nyghtserif: ["Nyghtserif", "sans-serif"] } } } };
+    </script>
+    <style>
+      @font-face { font-family: "Satoshi Variable"; src: url("https://cdn.prod.website-files.com/66fef51bb2a32743f5bfff90/66fef51bb2a32743f5bfffe6_Satoshi-Variable.ttf") format("truetype"); font-weight: 300 900; font-style: normal; }
+      @font-face { font-family: "Nyghtserif"; src: url("https://cdn.prod.website-files.com/66fef51bb2a32743f5bfff90/66fef51bb2a32743f5c0004d_NyghtSerif-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: "Satoshi Variable", sans-serif; }
+      #nav-menu { display: none; }
+      #nav-menu.open { display: flex; }
+      @media (min-width: 768px) { #nav-menu { display: flex; } }
+
+      /* ---- Guide article styling (reused across all guide pages) ---- */
+      .guide-body { color: #44403c; }
+      .guide-body h2 { font-family: "Nyghtserif", serif; font-size: 1.9rem; line-height: 2.3rem; color: #1c1917; margin: 2.4rem 0 0.7rem; }
+      .guide-body h3 { font-weight: 700; font-size: 1.1rem; color: #1c1917; margin: 1.5rem 0 0.35rem; }
+      .guide-body p { line-height: 1.75; margin-bottom: 1rem; }
+      .guide-body ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 1.1rem; }
+      .guide-body ul li { margin-bottom: 0.35rem; }
+      .guide-body strong { color: #1c1917; }
+      .guide-callout { background: #ecfdf5; border-left: 4px solid #059669; border-radius: 14px; padding: 1.25rem 1.5rem; margin: 1.75rem 0; }
+      .guide-callout p { margin-bottom: 0.4rem; }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- ===== NAVBAR ===== -->
+    <header class="fixed top-0 inset-x-0 z-[1000] h-[62px] max-w-[1290px] mx-auto rounded-b-[30px]">
+      <div class="absolute inset-0 backdrop-blur-[5px] bg-white/90 rounded-b-[30px]"></div>
+      <div class="relative h-full max-w-[1300px] mx-auto flex items-center justify-between px-6 md:px-8">
+        <a href="../index.html" class="flex items-center no-underline">
+          <img src="../logo.png" alt="Serenity Community Management" class="h-12 md:h-14 w-auto" />
+        </a>
+        <button id="hamburger" class="md:hidden p-2 text-stone-900" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+        <nav id="nav-menu" class="absolute md:relative top-[62px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-white md:bg-transparent rounded-b-[30px] md:rounded-none flex-col md:flex-row items-start md:items-center w-full md:w-auto pb-6 md:pb-0 z-50 shadow-xl md:shadow-none">
+          <div class="flex flex-col md:flex-row items-start md:items-center md:gap-7 px-6 md:px-0 pt-4 md:pt-0">
+            <a href="../index.html#intro" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">Home</a>
+            <a href="../index.html#about" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">About Us</a>
+            <a href="../index.html#services" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">Services</a>
+            <a href="../index.html#resources" class="text-[15px] font-bold text-emerald-700 py-2 md:py-0 hover:text-emerald-900 transition-colors">Board Resources</a>
+          </div>
+          <div class="px-6 md:px-0 md:ml-6 mt-3 md:mt-0">
+            <a href="../index.html#proposal" class="bg-stone-900 text-white text-[13px] font-bold px-5 py-3 rounded-b-[30px] rounded-t-none md:rounded-[8px] block md:inline-block text-center hover:bg-emerald-800 transition-colors">Request a Proposal</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== GUIDE HERO ===== -->
+    <section class="pt-[120px] md:pt-[150px] pb-8 px-6 md:px-8 bg-stone-50 border-b border-stone-200">
+      <div class="max-w-[820px] mx-auto">
+        <a href="../index.html#resources" class="text-emerald-700 text-sm font-semibold hover:text-emerald-900">&larr; Board Resources</a>
+        <p class="text-emerald-700 font-semibold text-sm mt-4 uppercase tracking-wide">Board Education Series</p>
+        <h1 class="font-nyghtserif text-4xl md:text-6xl leading-tight text-stone-900 mt-2">What Every HOA Treasurer Should Know</h1>
+        <p class="text-stone-600 text-lg mt-4">A guide to financial stewardship and fiduciary responsibility for HOA treasurers and board members.</p>
+      </div>
+    </section>
+
+    <!-- ===== GUIDE BODY ===== -->
+    <main class="px-6 md:px-8 py-12">
+      <article class="guide-body max-w-[820px] mx-auto">
+        <h2>Introduction</h2>
+        <p>The Treasurer plays a critical role in the financial health and stability of a Homeowners Association (HOA). While the entire Board of Directors shares responsibility for financial oversight, the Treasurer serves as the primary financial officer of the association.</p>
+        <p>An effective Treasurer helps ensure that:</p>
+        <ul>
+          <li>Association funds are properly managed.</li>
+          <li>Financial records are accurate.</li>
+          <li>Budgets are realistic and sustainable.</li>
+          <li>Reserves are adequately funded.</li>
+          <li>Financial reports are transparent and understandable.</li>
+          <li>The association complies with legal and governing document requirements.</li>
+        </ul>
+        <p>This guide outlines the essential knowledge and responsibilities every HOA Treasurer should understand.</p>
+
+        <h2>1. Understanding Your Fiduciary Duty</h2>
+        <p>As Treasurer, you have a fiduciary duty to act in the best interests of the association. This means:</p>
+        <ul>
+          <li>Acting honestly and ethically.</li>
+          <li>Exercising reasonable care in financial decisions.</li>
+          <li>Avoiding conflicts of interest.</li>
+          <li>Protecting association assets.</li>
+          <li>Making informed financial recommendations.</li>
+        </ul>
+        <p>A Treasurer is not expected to be an accountant but should understand the association's financial position and ensure proper financial controls are in place.</p>
+
+        <h2>2. Know Your Governing Documents</h2>
+        <h3>Governing Documents</h3>
+        <p>Every Treasurer should become familiar with:</p>
+        <ul>
+          <li>Declaration (CC&amp;Rs)</li>
+          <li>Bylaws</li>
+          <li>Articles of Incorporation</li>
+          <li>Rules and Regulations</li>
+          <li>Financial Policies</li>
+        </ul>
+        <h3>Review Requirements For</h3>
+        <ul>
+          <li>Assessment authority</li>
+          <li>Spending limits</li>
+          <li>Reserve funding obligations</li>
+          <li>Borrowing restrictions</li>
+          <li>Investment limitations</li>
+          <li>Budget approval procedures</li>
+        </ul>
+        <p>Understanding these documents helps avoid unauthorized expenditures and procedural mistakes.</p>
+
+        <h2>3. Understand the HOA's Financial Statements</h2>
+        <p>A Treasurer should regularly review and understand the association's key financial reports.</p>
+        <h3>Balance Sheet</h3>
+        <p>Shows:</p>
+        <ul>
+          <li>Assets</li>
+          <li>Liabilities</li>
+          <li>Equity or fund balances</li>
+        </ul>
+        <p><strong>Key Questions:</strong></p>
+        <ul>
+          <li>How much cash does the association have?</li>
+          <li>Are reserve funds properly segregated?</li>
+          <li>Are liabilities increasing?</li>
+        </ul>
+        <h3>Income Statement (Profit &amp; Loss)</h3>
+        <p>Shows:</p>
+        <ul>
+          <li>Revenue received</li>
+          <li>Expenses incurred</li>
+          <li>Net operating results</li>
+        </ul>
+        <p><strong>Key Questions:</strong></p>
+        <ul>
+          <li>Are expenses within budget?</li>
+          <li>Are assessments being collected as expected?</li>
+          <li>Are operating deficits occurring?</li>
+        </ul>
+        <h3>Budget Comparison Report</h3>
+        <p>Compares:</p>
+        <ul>
+          <li>Budgeted amounts</li>
+          <li>Actual spending</li>
+          <li>Variances</li>
+        </ul>
+        <p>Treasurers should investigate significant variances and report findings to the Board.</p>
+        <h3>Accounts Receivable Report</h3>
+        <p>Tracks homeowner assessment balances.</p>
+        <p><strong>Key Questions:</strong></p>
+        <ul>
+          <li>How much is delinquent?</li>
+          <li>Are collection procedures being followed?</li>
+          <li>Is cash flow at risk?</li>
+        </ul>
+
+        <h2>4. Build and Manage the Annual Budget</h2>
+        <p>One of the Treasurer's most important responsibilities is assisting with the annual budget. The budget should include:</p>
+        <h3>Operating Expenses</h3>
+        <ul>
+          <li>Landscaping</li>
+          <li>Utilities</li>
+          <li>Insurance</li>
+          <li>Management fees</li>
+          <li>Legal expenses</li>
+          <li>Maintenance</li>
+          <li>Administrative costs</li>
+        </ul>
+        <h3>Reserve Contributions</h3>
+        <p>Funding for future major repairs and replacements. Examples:</p>
+        <ul>
+          <li>Roof replacement</li>
+          <li>Street resurfacing</li>
+          <li>Pool renovation</li>
+          <li>Fence replacement</li>
+          <li>Exterior painting</li>
+        </ul>
+        <h3>Budgeting Best Practices</h3>
+        <ul>
+          <li>Use historical data.</li>
+          <li>Consider inflation.</li>
+          <li>Review vendor contract increases.</li>
+          <li>Plan for unexpected expenses.</li>
+          <li>Fund reserves consistently.</li>
+          <li>Avoid artificially low assessments.</li>
+        </ul>
+
+        <h2>5. Understand Reserve Funds</h2>
+        <p>Reserve funds are savings set aside for future major repairs and replacements. A healthy reserve fund helps avoid:</p>
+        <ul>
+          <li>Special assessments</li>
+          <li>Deferred maintenance</li>
+          <li>Financial instability</li>
+        </ul>
+        <h3>Reserve Study Basics</h3>
+        <p>A reserve study evaluates:</p>
+        <ul>
+          <li>Common-area assets</li>
+          <li>Remaining useful life</li>
+          <li>Replacement costs</li>
+          <li>Annual funding requirements</li>
+        </ul>
+        <p>The Treasurer should:</p>
+        <ul>
+          <li>Review reserve studies regularly.</li>
+          <li>Monitor reserve funding levels.</li>
+          <li>Recommend updates as needed.</li>
+        </ul>
+
+        <h2>6. Protect Association Funds</h2>
+        <p>Strong internal controls reduce the risk of fraud, theft, and accounting errors.</p>
+        <h3>Separation of Duties</h3>
+        <p>No single person should control all financial functions. For example:</p>
+        <ul>
+          <li>One person prepares checks.</li>
+          <li>Another reviews invoices.</li>
+          <li>Two signatures may be required for large payments.</li>
+        </ul>
+        <h3>Bank Reconciliations</h3>
+        <p>Monthly bank reconciliations should be completed and reviewed. Questions to ask:</p>
+        <ul>
+          <li>Do balances match?</li>
+          <li>Are there unexplained transactions?</li>
+          <li>Are outstanding checks reasonable?</li>
+        </ul>
+        <h3>Approval Procedures</h3>
+        <p>Require Board approval for:</p>
+        <ul>
+          <li>Significant expenditures</li>
+          <li>Non-budgeted expenses</li>
+          <li>Major contracts</li>
+        </ul>
+
+        <h2>7. Monitor Cash Flow</h2>
+        <p>Cash flow management is critical. Even financially healthy associations can experience cash shortages if assessment collections are delayed. Monitor:</p>
+        <ul>
+          <li>Monthly income</li>
+          <li>Vendor payments</li>
+          <li>Reserve transfers</li>
+          <li>Delinquency trends</li>
+        </ul>
+        <p>Always ensure adequate operating cash is available.</p>
+
+        <h2>8. Manage Delinquencies Consistently</h2>
+        <p>Unpaid assessments affect all homeowners. The Treasurer should ensure that collection policies are applied fairly and consistently. Typical collection process:</p>
+        <ul>
+          <li>Courtesy reminder</li>
+          <li>Late notice</li>
+          <li>Demand letter</li>
+          <li>Payment plan review</li>
+          <li>Legal action if necessary</li>
+        </ul>
+        <p>Collection procedures should follow governing documents and applicable laws.</p>
+
+        <h2>9. Work Effectively with Auditors and Accountants</h2>
+        <p>Most associations engage accounting professionals for:</p>
+        <ul>
+          <li>Financial reviews</li>
+          <li>Audits</li>
+          <li>Tax preparation</li>
+          <li>Financial statement preparation</li>
+        </ul>
+        <p>The Treasurer serves as a key liaison. Responsibilities include:</p>
+        <ul>
+          <li>Providing requested records</li>
+          <li>Reviewing reports</li>
+          <li>Presenting findings to the Board</li>
+          <li>Implementing recommendations</li>
+        </ul>
+
+        <h2>10. Understand HOA Taxes</h2>
+        <p>Most HOAs must file annual tax returns. The Treasurer should know:</p>
+        <ul>
+          <li>Filing deadlines</li>
+          <li>Applicable tax forms</li>
+          <li>Tax preparation responsibilities</li>
+        </ul>
+        <p>Even nonprofit associations generally have tax filing obligations. Consult qualified tax professionals regarding specific requirements.</p>
+
+        <h2>11. Present Financial Reports Clearly</h2>
+        <p>Board members and homeowners may not have financial backgrounds. The Treasurer should present information in a simple and understandable format. Focus on:</p>
+        <ul>
+          <li>Current cash balances</li>
+          <li>Budget performance</li>
+          <li>Delinquencies</li>
+          <li>Reserve fund status</li>
+          <li>Significant financial risks</li>
+          <li>Upcoming major expenditures</li>
+        </ul>
+        <p>Avoid unnecessary accounting jargon whenever possible.</p>
+
+        <h2>12. Plan for Financial Risks</h2>
+        <p>Treasurers should help identify potential risks. Examples include:</p>
+        <ul>
+          <li>Insurance increases</li>
+          <li>Major infrastructure failures</li>
+          <li>Vendor cost increases</li>
+          <li>Natural disasters</li>
+          <li>Legal claims</li>
+          <li>Unexpected maintenance costs</li>
+        </ul>
+        <p>Good financial planning includes contingency reserves and long-term forecasting.</p>
+
+        <h2>13. Maintain Transparency</h2>
+        <p>Transparency builds trust with homeowners. Best practices include:</p>
+        <ul>
+          <li>Accurate reporting</li>
+          <li>Timely financial disclosures</li>
+          <li>Open budget discussions</li>
+          <li>Clear explanations of assessment changes</li>
+          <li>Consistent record retention</li>
+        </ul>
+        <p>Transparency reduces misunderstandings and strengthens confidence in Board decisions.</p>
+
+        <h2>14. Treasurer's Monthly Checklist</h2>
+        <p>Every month, the Treasurer should:</p>
+        <ul>
+          <li>Review bank reconciliations</li>
+          <li>Review financial statements</li>
+          <li>Review budget variances</li>
+          <li>Monitor reserve balances</li>
+          <li>Review delinquency reports</li>
+          <li>Verify vendor payments</li>
+          <li>Review large expenditures</li>
+          <li>Prepare Treasurer's report</li>
+          <li>Attend Board meeting</li>
+        </ul>
+
+        <h2>15. Treasurer's Annual Checklist</h2>
+        <p>Every year, the Treasurer should:</p>
+        <ul>
+          <li>Assist with budget preparation</li>
+          <li>Review reserve study</li>
+          <li>Coordinate audit or financial review</li>
+          <li>Review insurance costs</li>
+          <li>Verify tax filings</li>
+          <li>Review financial policies</li>
+          <li>Evaluate investment accounts</li>
+          <li>Present annual financial summary</li>
+          <li>Recommend assessment adjustments if needed</li>
+        </ul>
+
+        <h2>Common Mistakes HOA Treasurers Should Avoid</h2>
+        <ul>
+          <li>Ignoring reserve funding</li>
+          <li>Delaying collection efforts</li>
+          <li>Approving expenses without documentation</li>
+          <li>Relying solely on management reports</li>
+          <li>Making financial decisions without Board approval</li>
+          <li>Overlooking budget variances</li>
+          <li>Failing to review bank statements</li>
+          <li>Underestimating future maintenance costs</li>
+        </ul>
+
+        <div class="guide-callout">
+          <p class="font-nyghtserif text-xl text-stone-900">Treasurer's Guiding Principle</p>
+          <p class="italic">"Protect the Association's Assets, Plan for the Future, and Report with Transparency."</p>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>The HOA Treasurer serves as a steward of the association's financial resources. Success requires diligence, transparency, sound judgment, and a commitment to protecting the long-term financial health of the community. A knowledgeable Treasurer helps the Board make informed decisions, maintain homeowner trust, preserve property values, and ensure the association remains financially strong for years to come.</p>
+
+        <div class="mt-12 pt-8 border-t border-stone-200">
+          <p class="text-stone-500 text-sm">Have questions about your community's budget, reserves, or financial reporting? <a href="../index.html#proposal" class="text-emerald-700 font-semibold hover:text-emerald-900">Request a proposal</a> and our team will be glad to help.</p>
+        </div>
+      </article>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-stone-900 text-white px-6 md:px-8 py-14 mt-8">
+      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div>
+          <img src="../logo.png" alt="Serenity Community Management" class="h-14 w-auto brightness-0 invert" />
+          <p class="text-stone-400 mt-4 max-w-[320px]">Professional HOA management that puts your community first.</p>
+        </div>
+        <nav class="flex flex-col gap-2">
+          <a href="../index.html#intro" class="text-stone-300 hover:text-white transition-colors">Home</a>
+          <a href="../index.html#about" class="text-stone-300 hover:text-white transition-colors">About Us</a>
+          <a href="../index.html#services" class="text-stone-300 hover:text-white transition-colors">Services</a>
+          <a href="../index.html#resources" class="text-stone-300 hover:text-white transition-colors">Board Resources</a>
+          <a href="../index.html#proposal" class="text-stone-300 hover:text-white transition-colors">Request a Proposal</a>
+        </nav>
+        <div class="text-stone-400">
+          <p class="font-semibold text-white">Serenity Community Management</p>
+          <p class="mt-1">Las Vegas, NV</p>
+          <p class="mt-1"><a href="mailto:info@serenitycm.net" class="hover:text-white">info@serenitycm.net</a></p>
+        </div>
+      </div>
+      <p class="text-stone-500 text-sm text-center mt-10">© 2026 Serenity Community Management. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

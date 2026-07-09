@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nevada HOA Election Requirements — Serenity Community Management</title>
+    <meta name="description" content="A board member's guide to conducting compliant HOA elections in Nevada under NRS Chapter 116: secret ballots, ballot timelines, candidate rights, quorum rules, and best practices." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { satoshi: ["Satoshi Variable", "sans-serif"], nyghtserif: ["Nyghtserif", "sans-serif"] } } } };
+    </script>
+    <style>
+      @font-face { font-family: "Satoshi Variable"; src: url("https://cdn.prod.website-files.com/66fef51bb2a32743f5bfff90/66fef51bb2a32743f5bfffe6_Satoshi-Variable.ttf") format("truetype"); font-weight: 300 900; font-style: normal; }
+      @font-face { font-family: "Nyghtserif"; src: url("https://cdn.prod.website-files.com/66fef51bb2a32743f5bfff90/66fef51bb2a32743f5c0004d_NyghtSerif-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: "Satoshi Variable", sans-serif; }
+      #nav-menu { display: none; }
+      #nav-menu.open { display: flex; }
+      @media (min-width: 768px) { #nav-menu { display: flex; } }
+
+      /* ---- Guide article styling (reused across all guide pages) ---- */
+      .guide-body { color: #44403c; }
+      .guide-body h2 { font-family: "Nyghtserif", serif; font-size: 1.9rem; line-height: 2.3rem; color: #1c1917; margin: 2.4rem 0 0.7rem; }
+      .guide-body h3 { font-weight: 700; font-size: 1.1rem; color: #1c1917; margin: 1.5rem 0 0.35rem; }
+      .guide-body p { line-height: 1.75; margin-bottom: 1rem; }
+      .guide-body ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 1.1rem; }
+      .guide-body ul li { margin-bottom: 0.35rem; }
+      .guide-body strong { color: #1c1917; }
+      .guide-callout { background: #ecfdf5; border-left: 4px solid #059669; border-radius: 14px; padding: 1.25rem 1.5rem; margin: 1.75rem 0; }
+      .guide-callout p { margin-bottom: 0.4rem; }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- ===== NAVBAR ===== -->
+    <header class="fixed top-0 inset-x-0 z-[1000] h-[62px] max-w-[1290px] mx-auto rounded-b-[30px]">
+      <div class="absolute inset-0 backdrop-blur-[5px] bg-white/90 rounded-b-[30px]"></div>
+      <div class="relative h-full max-w-[1300px] mx-auto flex items-center justify-between px-6 md:px-8">
+        <a href="../index.html" class="flex items-center no-underline">
+          <img src="../logo.png" alt="Serenity Community Management" class="h-12 md:h-14 w-auto" />
+        </a>
+        <button id="hamburger" class="md:hidden p-2 text-stone-900" onclick="document.getElementById('nav-menu').classList.toggle('open')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+        <nav id="nav-menu" class="absolute md:relative top-[62px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-white md:bg-transparent rounded-b-[30px] md:rounded-none flex-col md:flex-row items-start md:items-center w-full md:w-auto pb-6 md:pb-0 z-50 shadow-xl md:shadow-none">
+          <div class="flex flex-col md:flex-row items-start md:items-center md:gap-7 px-6 md:px-0 pt-4 md:pt-0">
+            <a href="../index.html#intro" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">Home</a>
+            <a href="../index.html#about" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">About Us</a>
+            <a href="../index.html#services" class="text-[15px] font-bold text-stone-900 py-2 md:py-0 hover:text-emerald-700 transition-colors">Services</a>
+            <a href="../index.html#resources" class="text-[15px] font-bold text-emerald-700 py-2 md:py-0 hover:text-emerald-900 transition-colors">Board Resources</a>
+          </div>
+          <div class="px-6 md:px-0 md:ml-6 mt-3 md:mt-0">
+            <a href="../index.html#proposal" class="bg-stone-900 text-white text-[13px] font-bold px-5 py-3 rounded-b-[30px] rounded-t-none md:rounded-[8px] block md:inline-block text-center hover:bg-emerald-800 transition-colors">Request a Proposal</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== GUIDE HERO ===== -->
+    <section class="pt-[120px] md:pt-[150px] pb-8 px-6 md:px-8 bg-stone-50 border-b border-stone-200">
+      <div class="max-w-[820px] mx-auto">
+        <a href="../index.html#resources" class="text-emerald-700 text-sm font-semibold hover:text-emerald-900">&larr; Board Resources</a>
+        <p class="text-emerald-700 font-semibold text-sm mt-4 uppercase tracking-wide">Board Education Series</p>
+        <h1 class="font-nyghtserif text-4xl md:text-6xl leading-tight text-stone-900 mt-2">Nevada HOA Election Requirements</h1>
+        <p class="text-stone-600 text-lg mt-4">A board member's guide to conducting fair, transparent, and compliant HOA elections under Nevada Revised Statutes (NRS) Chapter 116.</p>
+      </div>
+    </section>
+
+    <!-- ===== GUIDE BODY ===== -->
+    <main class="px-6 md:px-8 py-12">
+      <article class="guide-body max-w-[820px] mx-auto">
+        <h2>Introduction</h2>
+        <p>Board elections are among the most important responsibilities of a Homeowners Association (HOA). Nevada law establishes specific procedures designed to ensure elections are fair, transparent, and conducted by secret ballot.</p>
+        <p>Failure to comply with election requirements can result in homeowner disputes, challenges to election results, and potential regulatory complaints. This guide provides an overview of Nevada HOA election requirements and best practices for conducting compliant elections.</p>
+
+        <h2>Legal Authority</h2>
+        <p>Nevada HOA elections are primarily governed by:</p>
+        <ul>
+          <li>Nevada Revised Statutes (NRS) Chapter 116</li>
+          <li>Association Bylaws</li>
+          <li>Declaration of Covenants, Conditions &amp; Restrictions (CC&amp;Rs)</li>
+          <li>Association Election Rules and Policies</li>
+        </ul>
+        <p>When there is a conflict, Nevada law generally controls over association rules and procedures. Always consult legal counsel regarding specific election questions.</p>
+
+        <h2>1. Annual Election Requirement</h2>
+        <p>Nevada HOAs must conduct elections for board members in accordance with their governing documents and applicable state law. Board members are elected by the homeowners and serve terms established by the association's governing documents.</p>
+        <p>The annual meeting typically serves as the forum for announcing election results and conducting other association business.</p>
+
+        <h2>2. Secret Ballot Requirement</h2>
+        <p>Nevada law under NRS Chapter 116 requires the election of executive board members to be conducted by secret ballot. Secret ballots may be provided in paper form and, where permitted, electronic ballots may also be used.</p>
+        <p>The purpose of the secret ballot requirement is to:</p>
+        <ul>
+          <li>Protect voter privacy</li>
+          <li>Promote election integrity</li>
+          <li>Reduce undue influence</li>
+          <li>Encourage homeowner participation</li>
+        </ul>
+
+        <h2>3. Ballot Distribution Requirements</h2>
+        <p>The association secretary or designated officer is responsible for ensuring ballots are distributed to eligible owners. Election materials should include:</p>
+        <ul>
+          <li>Ballot</li>
+          <li>Voting instructions</li>
+          <li>Return envelope or electronic voting instructions</li>
+          <li>Candidate information (if provided)</li>
+        </ul>
+        <p>Nevada law requires owners to receive sufficient time to return their ballots. Owners must be provided at least 15 days after ballots are mailed or made available before voting closes.</p>
+
+        <h2>4. Candidate Eligibility</h2>
+        <p>Candidate qualifications are generally established by:</p>
+        <ul>
+          <li>Nevada law</li>
+          <li>Association bylaws</li>
+          <li>Governing documents</li>
+        </ul>
+        <p>Before finalizing the ballot, verify that each candidate meets all eligibility requirements. Associations should apply eligibility standards consistently and uniformly.</p>
+
+        <h2>5. Candidate Rights</h2>
+        <p>Nevada law protects a candidate's ability to campaign for election. Associations may not adopt rules that prohibit or unreasonably interfere with a candidate's campaign activities, although campaigns may be limited to the period specified by law.</p>
+        <p>Candidates may also have statutory rights regarding distribution of candidate information and access to certain owner mailing information as permitted by Nevada law.</p>
+
+        <h2>6. Quorum Rules for Elections</h2>
+        <p>One unique feature of Nevada HOA law under NRS Chapter 116 is that a quorum is not required for the election of executive board members. This means:</p>
+        <ul>
+          <li>Election results may be determined solely by ballots received.</li>
+          <li>Failure to achieve meeting attendance requirements does not automatically invalidate an election.</li>
+          <li>Only properly submitted ballots are counted.</li>
+        </ul>
+        <p>Boards should still encourage homeowner participation to improve representation and community engagement.</p>
+
+        <h2>7. Counting Ballots</h2>
+        <p>Nevada law establishes strict procedures for ballot handling.</p>
+        <h3>Ballot Counting Requirements</h3>
+        <ul>
+          <li>Ballots must be opened and counted at a meeting of the association.</li>
+          <li>Election results must be announced and entered into the meeting record.</li>
+          <li>Only ballots received by the association may be counted.</li>
+        </ul>
+
+        <h2>8. Who May Not Count Ballots</h2>
+        <p>To preserve election integrity, Nevada law prohibits certain individuals from participating in ballot counting. The following individuals may not possess, access, open, count, or otherwise participate in ballot tabulation before the official count:</p>
+        <ul>
+          <li>Incumbent board members who are candidates</li>
+          <li>Any candidate whose name appears on the ballot</li>
+        </ul>
+        <p>These restrictions help ensure impartial election administration.</p>
+
+        <h2>9. Election Timeline Example</h2>
+        <h3>60–90 Days Before Election</h3>
+        <ul>
+          <li>Determine open board positions</li>
+          <li>Verify candidate qualifications</li>
+          <li>Announce nomination process</li>
+          <li>Establish election calendar</li>
+        </ul>
+        <h3>30–45 Days Before Election</h3>
+        <ul>
+          <li>Finalize candidate list</li>
+          <li>Collect candidate statements</li>
+          <li>Prepare election materials</li>
+        </ul>
+        <h3>At Least 15 Days Before Voting Deadline</h3>
+        <ul>
+          <li>Mail or electronically distribute ballots</li>
+          <li>Provide voting instructions</li>
+          <li>Provide candidate information</li>
+          <li>Ensure owners have the required voting period</li>
+        </ul>
+        <h3>Election Meeting</h3>
+        <ul>
+          <li>Open ballots</li>
+          <li>Count ballots</li>
+          <li>Announce results</li>
+          <li>Record results in meeting minutes</li>
+          <li>Seat newly elected directors</li>
+        </ul>
+
+        <h2>10. Election Records</h2>
+        <p>Associations should maintain complete election records, including:</p>
+        <ul>
+          <li>Ballots</li>
+          <li>Candidate forms</li>
+          <li>Candidate statements</li>
+          <li>Meeting notices</li>
+          <li>Vote tally sheets</li>
+          <li>Election results</li>
+          <li>Meeting minutes</li>
+        </ul>
+        <p>Proper documentation helps defend against challenges and promotes transparency.</p>
+
+        <h2>11. Common Election Mistakes</h2>
+        <p>Avoid the following:</p>
+        <ul>
+          <li>Failing to use secret ballots</li>
+          <li>Insufficient voting period</li>
+          <li>Candidate involvement in ballot counting</li>
+          <li>Inconsistent application of eligibility requirements</li>
+          <li>Poor record retention</li>
+          <li>Inadequate election notices</li>
+          <li>Failure to document results</li>
+        </ul>
+
+        <h2>12. Election Best Practices</h2>
+        <p>Even when not specifically required by law, the following practices help improve election credibility:</p>
+        <h3>Election Committee</h3>
+        <p>Appoint an independent election committee.</p>
+        <h3>Third-Party Tabulation</h3>
+        <p>Consider using:</p>
+        <ul>
+          <li>Community management companies</li>
+          <li>Election inspectors</li>
+          <li>Independent tabulators</li>
+        </ul>
+        <h3>Written Procedures</h3>
+        <p>Adopt a formal election policy outlining:</p>
+        <ul>
+          <li>Candidate nominations</li>
+          <li>Ballot handling</li>
+          <li>Vote counting procedures</li>
+          <li>Record retention requirements</li>
+        </ul>
+        <h3>Owner Education</h3>
+        <p>Provide homeowners with:</p>
+        <ul>
+          <li>Election schedules</li>
+          <li>Candidate information</li>
+          <li>Voting instructions</li>
+          <li>Election results summaries</li>
+        </ul>
+
+        <h2>Sample Election Compliance Checklist</h2>
+        <h3>Before the Election</h3>
+        <ul>
+          <li>Verify governing document requirements</li>
+          <li>Verify candidate eligibility</li>
+          <li>Prepare ballots</li>
+          <li>Prepare candidate information</li>
+          <li>Schedule election meeting</li>
+        </ul>
+        <h3>During the Election</h3>
+        <ul>
+          <li>Use secret ballots</li>
+          <li>Ensure ballot security</li>
+          <li>Exclude candidates from ballot counting</li>
+          <li>Count only eligible ballots</li>
+          <li>Record results accurately</li>
+        </ul>
+        <h3>After the Election</h3>
+        <ul>
+          <li>Announce results</li>
+          <li>Record results in minutes</li>
+          <li>Retain election records</li>
+          <li>Orient newly elected directors</li>
+          <li>Update association records</li>
+        </ul>
+
+        <div class="guide-callout">
+          <p class="font-nyghtserif text-xl text-stone-900">Guiding Principle</p>
+          <p class="italic">"Transparent elections build trust, protect integrity, and strengthen the community."</p>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>Nevada HOA elections are designed to promote fairness, transparency, and homeowner participation. By following Nevada statutory requirements, maintaining secure ballot procedures, and applying rules consistently, associations can conduct successful elections that strengthen homeowner confidence and support effective community governance.</p>
+
+        <div class="guide-callout">
+          <p class="font-nyghtserif text-xl text-stone-900">Disclaimer</p>
+          <p>This guide is intended for general educational purposes only and does not constitute legal advice. Key statutory points referenced here — including secret ballots, the minimum 15-day ballot return period, no quorum requirement for board elections, and restrictions on candidates handling ballots — are based on Nevada HOA election provisions in NRS Chapter 116. Boards should consult qualified legal counsel regarding specific election procedures, governing document interpretation, and the current text of NRS Chapter 116.</p>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-stone-200">
+          <p class="text-stone-500 text-sm">Have questions about your community's election process or governance? <a href="../index.html#proposal" class="text-emerald-700 font-semibold hover:text-emerald-900">Request a proposal</a> and our team will be glad to help.</p>
+        </div>
+      </article>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-stone-900 text-white px-6 md:px-8 py-14 mt-8">
+      <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div>
+          <img src="../logo.png" alt="Serenity Community Management" class="h-14 w-auto brightness-0 invert" />
+          <p class="text-stone-400 mt-4 max-w-[320px]">Professional HOA management that puts your community first.</p>
+        </div>
+        <nav class="flex flex-col gap-2">
+          <a href="../index.html#intro" class="text-stone-300 hover:text-white transition-colors">Home</a>
+          <a href="../index.html#about" class="text-stone-300 hover:text-white transition-colors">About Us</a>
+          <a href="../index.html#services" class="text-stone-300 hover:text-white transition-colors">Services</a>
+          <a href="../index.html#resources" class="text-stone-300 hover:text-white transition-colors">Board Resources</a>
+          <a href="../index.html#proposal" class="text-stone-300 hover:text-white transition-colors">Request a Proposal</a>
+        </nav>
+        <div class="text-stone-400">
+          <p class="font-semibold text-white">Serenity Community Management</p>
+          <p class="mt-1">Las Vegas, NV</p>
+          <p class="mt-1"><a href="mailto:info@serenitycm.net" class="hover:text-white">info@serenitycm.net</a></p>
+        </div>
+      </div>
+      <p class="text-stone-500 text-sm text-center mt-10">© 2026 Serenity Community Management. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
